@@ -52,12 +52,6 @@ resource "google_compute_vpn_tunnel" "tunnels" {
   router                          = google_compute_router.router.id
   vpn_gateway_interface           = each.value.vpn_gateway_interface
   ike_version                     = 2
-
-  lifecycle {
-    ignore_changes = [
-      shared_secret,
-    ]
-  }
 }
 
 resource "google_compute_router_interface" "router_interface" {
