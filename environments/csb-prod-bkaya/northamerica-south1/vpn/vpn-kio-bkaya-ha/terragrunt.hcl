@@ -30,10 +30,13 @@ inputs = {
     "201.175.46.68"
   ]
 
-  # REQUIRES MANUAL INPUT: You must replace these with the actual shared secrets.
+  # Se leen desde las variables de entorno de tu máquina local por seguridad.
+  # Exporta estas variables en tu terminal antes de ejecutar terragrunt:
+  # export TF_VAR_VPN_SECRET_0="tu_secreto_0"
+  # export TF_VAR_VPN_SECRET_1="tu_secreto_1"
   shared_secrets = [
-    "REPLACE_WITH_SECRET_0",
-    "REPLACE_WITH_SECRET_1"
+    get_env("TF_VAR_VPN_SECRET_0", "dummy-secret-0"),
+    get_env("TF_VAR_VPN_SECRET_1", "dummy-secret-1")
   ]
 
   bgp_asn = 65010
