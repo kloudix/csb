@@ -7,7 +7,6 @@ terraform {
 }
 
 inputs = {
-  viewers = []
-
-  vms = {}
+  # Carga automáticamente la lista de usuarios y máquinas desde el archivo vms.yaml
+  vms = yamldecode(file("vms.yaml"))
 }

@@ -1,0 +1,10 @@
+csbgcpsis03:
+  zone: us-west1-c
+  os_users:
+    - user:exsaltuzar@consubanco.com
+    - user:exdvazquez@consubanco.com
+    # - user:jtabare@consubanco.com # ERROR: Usuario no existe en Google Cloud Identity
+    - user:lgarciat@consubanco.com
+    - user:maruiz@consubanco.com
+  # ad_users: []
+  # os_admins: []
