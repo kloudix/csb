@@ -26,8 +26,8 @@ inputs = {
   router_name  = "vpn-kio-bkaya-ha-cloud-router"
   
   peer_ips = [
-    "201.175.46.70",
-    "201.175.46.68"
+    "200.77.235.91", # KIO Tunel0 (Conecta con GCP_0)
+    "201.175.46.70"  # KIO Tunel1 (Conecta con GCP_1)
   ]
 
   # Se leen desde las variables de entorno de tu máquina local por seguridad.
