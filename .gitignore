@@ -30,3 +30,7 @@ terragrunt-debug.tfvars.json
 
 # Mac specific
 .DS_Store
+
+# Environment files (Secrets)
+.env
+*.env
