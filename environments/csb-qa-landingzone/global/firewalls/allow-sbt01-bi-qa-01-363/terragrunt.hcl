@@ -12,10 +12,10 @@ inputs = {
   # Si el nombre de tu red es diferente, descomenta y edita la siguiente línea:
   # network   = "vpc-csb-qa-landingzone"
 
-  # Origen: IP del ESB de QA y de Prom
-  source_ranges = [
-    "10.27.102.5/32", 
-    "10.27.102.6/32"
+  # Origen: Usar Network Tags (recomendado) en lugar de IPs fijas
+  source_tags = [
+    "csbgcpesbt01",
+    "csb-01-gcp-dac-prom-qa-01"
   ]
 
   # Destino: Aplicamos la regla a ambas VMs usando sus nombres como Network Tags
