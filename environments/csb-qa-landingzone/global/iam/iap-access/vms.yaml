@@ -5,3 +5,9 @@ csbgcpesbt01:
 csb-01-gcp-dac-prom-qa-01:
   zone: us-west1-c
   os_admins: []
+
+csbgcpbdadst01:
+  zone: us-west1-c
+  os_admins:
+    - user:mmontero@consubanco.com
+    - user:irodriguez@consubanco.com

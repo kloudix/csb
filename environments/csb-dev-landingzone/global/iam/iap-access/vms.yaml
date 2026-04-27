@@ -1,0 +1,5 @@
+csbgcpbdadsd01:
+  zone: us-west1-c
+  os_admins:
+    - user:mmontero@consubanco.com
+    - user:irodriguez@consubanco.com

@@ -7,7 +7,5 @@ terraform {
 }
 
 inputs = {
-  viewers = []
-
-  vms = {}
+  vms = yamldecode(file("vms.yaml"))
 }
