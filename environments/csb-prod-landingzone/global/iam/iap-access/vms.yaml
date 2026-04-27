@@ -7,4 +7,9 @@ csbgcpsis03:
     - user:lgarciat@consubanco.com
     - user:maruiz@consubanco.com
   # ad_users: []
-  # os_admins: []
+  os_admins:
+    - user:exsaltuzar@consubanco.com
+    - user:exdvazquez@consubanco.com
+    - user:jtabarez@consubanco.com
+    - user:lgarciat@consubanco.com
+    - user:maruiz@consubanco.com

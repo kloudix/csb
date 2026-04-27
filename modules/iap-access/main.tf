@@ -8,6 +8,11 @@ locals {
   tunnel_map = {
     for k, v in var.vms : k => distinct(concat(v.ad_users, v.os_admins, v.os_users))
   }
+
+  # Recolectar todos los os_admins únicos para darles rol de Service Account User
+  all_os_admins = distinct(flatten([
+    for vm in var.vms : vm.os_admins
+  ]))
 }
 
 # 1. Project level viewer role (so IAP desktop works)
@@ -46,4 +51,22 @@ resource "google_compute_instance_iam_binding" "os_user" {
   instance_name = each.key
   role          = "roles/compute.osLogin"
   members       = each.value.os_users
+}
+
+# 5. Instance Admin per VM (for Windows password generation)
+resource "google_compute_instance_iam_binding" "instance_admin" {
+  for_each = { for k, v in var.vms : k => v if length(v.os_admins) > 0 }
+  project       = var.project_id
+  zone          = each.value.zone
+  instance_name = each.key
+  role          = "roles/compute.instanceAdmin.v1"
+  members       = each.value.os_admins
+}
+
+# 6. Service Account User at Project level (for Windows password generation)
+resource "google_project_iam_member" "service_account_user" {
+  for_each = toset(local.all_os_admins)
+  project  = var.project_id
+  role     = "roles/iam.serviceAccountUser"
+  member   = each.key
 }
