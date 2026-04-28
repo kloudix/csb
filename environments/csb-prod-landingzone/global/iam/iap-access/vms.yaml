@@ -1,11 +1,6 @@
 csbgcpsis03:
   zone: us-west1-c
-  os_users:
-    - user:exsaltuzar@consubanco.com
-    - user:exdvazquez@consubanco.com
-    - user:jtabarez@consubanco.com
-    - user:lgarciat@consubanco.com
-    - user:maruiz@consubanco.com
+  os_users: []
   # ad_users: []
   os_admins:
     - user:exsaltuzar@consubanco.com
