@@ -35,3 +35,10 @@ variable "backend_groups" {
   }))
   default = []
 }
+
+variable "ip_address" {
+  description = "The internal IP address for the forwarding rule (optional)"
+  type        = string
+  default     = null
+}
+

@@ -32,4 +32,6 @@ resource "google_compute_forwarding_rule" "default" {
   ports                 = var.ports
   subnetwork            = var.subnetwork
   network               = var.network
+  ip_address            = var.ip_address
 }
+

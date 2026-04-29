@@ -18,7 +18,8 @@ inputs = {
   name              = "ingress-vcn01"
   region            = "us-west1"
   health_check_port = 8080
-  ports             = ["8080", "8081"]
+  ports             = ["8080", "8081", "8082"]
+  ip_address        = "10.18.0.181"
 
   backend_groups = [
     {
@@ -26,3 +27,4 @@ inputs = {
     }
   ]
 }
+

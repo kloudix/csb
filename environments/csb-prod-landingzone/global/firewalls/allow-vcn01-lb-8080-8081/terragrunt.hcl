@@ -24,7 +24,7 @@ inputs = {
   allow_rules = [
     {
       protocol = "tcp"
-      ports    = ["8080", "8081"]
+      ports    = ["8080", "8081", "8082"]
     },
     {
       protocol = "icmp"
