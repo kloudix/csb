@@ -7,7 +7,8 @@ terraform {
 }
 
 inputs = {
-  name = "allow-swi01-web-ports"
+  name = "allow-ic-swi01-web-ports"
+
 
   # Orígenes: Cliente autorizado e Interconnect
   source_ranges = [
