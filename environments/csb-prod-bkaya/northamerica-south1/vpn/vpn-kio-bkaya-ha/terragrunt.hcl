@@ -16,7 +16,7 @@ inputs = {
   
   peer_ips = [
     "200.77.235.91", # KIO Tunel0 (Conecta con GCP_0)
-    "201.175.46.70"  # KIO Tunel1 (Conecta con GCP_1)
+    "201.175.44.19"  # KIO Tunel1 (Conecta con GCP_1)
   ]
 
   # Se leen desde las variables de entorno de tu máquina local por seguridad.
