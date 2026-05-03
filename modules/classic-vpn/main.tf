@@ -41,13 +41,13 @@ resource "google_compute_forwarding_rule" "fr_udp4500" {
 }
 
 resource "google_compute_vpn_tunnel" "tunnel" {
-  name               = "${var.name}-tunnel"
-  region             = var.region
-  project            = var.project_id
-  target_vpn_gateway = google_compute_vpn_gateway.target_gateway.id
-  shared_secret      = var.shared_secret
-  peer_ip            = var.peer_ip
-
+  name                    = "${var.name}-tunnel"
+  region                  = var.region
+  project                 = var.project_id
+  target_vpn_gateway      = google_compute_vpn_gateway.target_gateway.id
+  shared_secret           = var.shared_secret
+  peer_ip                 = var.peer_ip
+  ike_version             = var.ike_version
   local_traffic_selector  = var.local_traffic_selector
   remote_traffic_selector = var.remote_traffic_selector
 

@@ -40,3 +40,10 @@ variable "remote_traffic_selector" {
   type        = list(string)
   default     = ["0.0.0.0/0"]
 }
+
+variable "ike_version" {
+  description = "IKE version (1 or 2)"
+  type        = number
+  default     = 2
+}
+

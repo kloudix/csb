@@ -10,6 +10,7 @@ inputs = {
   project_id    = "csb-prod-landingzone"
   region        = "us-west1"
   name          = "vpn-samara-landing"
+  ike_version   = 1
 
   peer_ip       = "201.163.187.116"
   shared_secret = get_env("TF_VAR_VPN_SECRET_1", "dummy-secret-1")

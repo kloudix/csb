@@ -11,6 +11,8 @@ inputs = {
   region        = "northamerica-south1"
   network       = "vpc-csb-prod-bkaya"
   name          = "vpn-samara-bkaya"
+  ike_version   = 1
+
   peer_ip       = "201.163.187.116"
   shared_secret = get_env("TF_VAR_VPN_SECRET_0", "dummy-secret-0")
 
